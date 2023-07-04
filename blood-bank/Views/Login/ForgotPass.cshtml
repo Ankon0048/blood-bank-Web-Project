@@ -1,0 +1,57 @@
+﻿<link href="~/css/donate_blood.css" rel="stylesheet" />
+
+<div class="form-out-div">
+    <div class="nece">
+        <div class="nece_2">
+            <div class="out-contain">
+                <div class="in-contain">
+                    <div>
+                        <img src="~/images/product/reset password-pana.png" />
+                    </div>
+                    <div>
+                        <form style="width: 390px;"
+                              method="post">
+                            <span class="form-span"> Reset Password</span>
+                            <div class="wrap-input">
+                                <input class="in"
+                                       type="text"
+                                       placeholder="UserID"
+                                       required
+                                       name="userid" />
+                                <span class="shadow-input"></span>
+                            </div>
+                            <div class="wrap-input">
+                                <input class="in"
+                                       type="password"
+                                       name="newpass"
+                                       placeholder="New Password"
+                                       required />
+                                <span class="shadow-input"></span>
+                            </div>
+                            <div class="wrap-input">
+                                <input class="in"
+                                       type="password"
+                                       name="pass"
+                                       placeholder="Confirm New Password"
+                                       required />
+                                <span class="shadow-input"></span>
+                            </div>
+                            <div class="wrap-input">
+                                <a style="font-size:15px; margin-left:135px" asp-controller="Login" asp-action="ForgotPass" class="text-decoration-none text-warning">Forgot Password?</a>
+                            </div>
+                            <div style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                      ">
+                                <button class="sub-btn" type="submit">
+                                    <span>Reset Password</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

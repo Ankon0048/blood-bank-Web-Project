@@ -1,0 +1,143 @@
+﻿@model Userprofile
+@inject IHttpContextAccessor _con;
+<link href="~/css/donate_blood.css" rel="stylesheet" />
+
+<div class="form-out-div">
+    <div class="nece">
+        <div class="nece_2">
+            <div class="out-contain">
+                <div class="in-contain">
+                    <h3 class="mb-3" style="margin-left: 370px; margin-top:-50px">Update Profile</h3>
+                    <div class="container">
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px;">User ID: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="UserID" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px;">New Password: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="password"
+                                               asp-for="Password" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Name: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="UserName" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Address: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="Address" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Contact Number: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="Number" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">NID or Birth Certificate ID: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="NID" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Date of Birth: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="text"
+                                               asp-for="DateOfBirth" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Email: </label>
+                                    <div class="wrap-input">
+                                        <input class="in text-dark"
+                                               type="email"
+                                               asp-for="Email" />
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Blood Group: </label>
+                                    <div class="wrap-input">
+                                        <select asp-for="Bloodgrp"
+                                                class="in">
+                                            <option disabled selected>Select Blood Group</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </select>
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label style="margin-left:15px; margin-bottom:5px">Gender: </label>
+                                    <div class="wrap-input">
+                                        <select asp-for="Gender"
+                                                class="in">
+                                            <option disabled selected>Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                        <span class="shadow-input"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap-input">
+                                <input class="in"
+                                       type="file"
+                                       name="pfile"
+                                       placeholder="ImageURL" />
+                                <span class="shadow-input"></span>
+                            </div>
+                            <div class="sub-btn">
+                                <button class="sub-btn" type="submit">
+                                    Update Profile
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

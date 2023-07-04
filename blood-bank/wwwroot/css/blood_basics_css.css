@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    max-width: 100%;
+    font-size:14px;
+}
+
+.white-bg {
+    position: absolute;
+    z-index: -1;
+}
+
+.para {
+    margin-left: 330px;
+    margin-right: 330px;
+    line-height: 200%;
+}
+
+.parar {
+    color: #666362;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-top: 2px;
+}
+
+    .para h4 {
+        font-size: 150%;
+    }
+
+    .para h5 {
+        font-size: 102%;
+    }
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: .75rem;
+    text-align: left;
+    font-size: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.bck-img {
+    position: absolute;
+    z-index: -10;
+}
+
+.want-bld {
+    position: relative;
+    height: auto;
+    width: 400px;
+    margin-left: 900px;
+    top: 60px;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 12px;
+    color: #f9f7f0;
+}
+
+.btn-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 700px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 18.5px 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    background-size: 200% auto;
+}
+
+.banner-btn-1 {
+    color: #cf3d3c;
+    border: 1px solid transparent;
+    margin-right: 28px;
+    border-color: white;
+}
+
+.banner-btn-2 {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.btn-1:hover {
+    background-image: linear-gradient(to left, #cf3d3c 0%, #fa8b0c 51%, #cf3d3c 100%);
+}
+
+.last {
+    position: absolute;
+    top: 4640px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #cf3d3c;
+    width: 10180px;
+    height: auto;
+}
+
+.con-tac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}

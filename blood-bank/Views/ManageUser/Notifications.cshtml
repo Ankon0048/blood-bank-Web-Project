@@ -1,0 +1,45 @@
+﻿@model List<UserNotification>
+@inject IHttpContextAccessor _con;
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Status</th>
+                        <th style="text-align:center">Date</th>
+                        <th style="text-align:center">Mark</th>
+                        <th style="text-align:center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var obj in Model)
+                    {
+                        if (obj.UserId == @_con.HttpContext.Session.GetString("userid"))
+                        {
+                            <tr>
+                                <td style="width:100px; text-align:center">@obj.Status</td>
+                                <td style="width:100px; text-align:center">@obj.Date</td>
+                                <td style="width:100px; text-align:center">@obj.Mark</td>
+                                <td style="width:100px; text-align:center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-controller="ManageUser" asp-action="Show" asp-route-id="@obj.Count" class="btn btn-info" style="margin-right:20px">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        @using (Html.BeginForm("Delete", "ManageUser", new { id = obj.Count }, FormMethod.Post))
+                                        {
+                                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/userreport.js"></script>
+}

@@ -1,0 +1,91 @@
+﻿@model VolunteerData
+<link href="~/css/adminmanagement.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+<div class="container">
+    <aside>
+        <div class="top">
+            <h2>Hello, Admin</h2>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a asp-controller="AdminHome" asp-action="AdminHome" style="text-decoration:none; margin-bottom:5px;">
+                <i class="bi bi-tools" style="font-size:20px"></i>
+                <h3 style="margin-top:6px; font-size:15px">Dashboard</h3>
+            </a>
+            <a style="text-decoration:none; margin-bottom:5px;" asp-controller="AdminHome" asp-action="AdminManagement">
+                <i class="bi bi-calendar-check-fill" style="font-size:20px"></i>
+                <h3 style="margin-top:6px; font-size:15px">Event Management</h3>
+            </a>
+            <a style="text-decoration:none; margin-bottom:5px;" asp-controller="AdminHome" asp-action="HospitalManagement">
+                <i class="bi bi-hospital-fill" style="font-size:20px"></i>
+                <h3 style="margin-top:6px; font-size:15px">Hospital Management</h3>
+            </a>
+            <a style="text-decoration:none; margin-bottom:5px;" asp-controller="AdminReport" asp-action="AdminReport">
+                <i class="bi bi-clipboard2-data-fill" style="font-size:20px"></i>
+                <h3 style="margin-top:6px; font-size:15px">Reports</h3>
+            </a>
+            <a style="text-decoration:none; margin-bottom:5px;" asp-controller="AdminHome" asp-action="Users">
+                <i class="bi bi-people-fill" style="font-size:20px"></i>
+                <h3 style="margin-top:6px; font-size:15px">Users</h3>
+            </a>
+        </div>
+    </aside>
+    <!-- End of Sidebar -->
+    <main>
+        <h1>Add Volunteer</h1>
+        <!--End of Insights-->
+        <div class="recent-orders">
+            <form method="post">
+                <div class="mb-3 row">
+                    <label asp-for="VolunteerID" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" placeholder="User ID" asp-for="VolunteerID">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" asp-for="Name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="Bloodgroup" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <select required asp-for="Bloodgroup"
+                                class="form-control">
+                            <option disabled selected>Select Blood Group</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="Number" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" asp-for="Number">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" asp-for="Address">
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:center">
+                    <button type="submit" class="btn btn-outline-primary"><i class="bi bi-droplet-half"></i>Add</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!------End of main ----------->
+</div>
+<script src="~/js/orders.js"></script>
+<script src="~/js/admin_dashboard.js"></script>

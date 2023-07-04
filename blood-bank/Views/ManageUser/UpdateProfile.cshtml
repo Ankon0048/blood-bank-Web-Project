@@ -1,0 +1,120 @@
+﻿@model Userprofile
+@inject IHttpContextAccessor _con;
+<link href="~/css/donate_blood.css" rel="stylesheet" />
+
+<div class="form-out-div">
+    <div class="nece">
+        <div class="nece_2">
+            <div class="out-contain">
+                <div class="in-contain">
+                    <div class="container">
+                        @if (_con.HttpContext.Session.GetString("userid") != null)
+                        {
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <img height="150px" width="150px" src="@Model.Imageurl" />
+                                </div>
+                            </div>
+                        }
+                        <div class="row">
+                            <div class="col-12">
+                                <label style="margin-left:15px; margin-bottom:5px;">User ID: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="UserID" style="text-align:center" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Name: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="UserName" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Address: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="Address"/>
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Contact Number: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="Number" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">NID or Birth Certificate ID: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="NID"/>
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Date of Birth: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="DateOfBirth" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Email: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="email"
+                                           asp-for="Email" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Blood Group: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="Bloodgrp" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label style="margin-left:15px; margin-bottom:5px">Gender: </label>
+                                <div class="wrap-input">
+                                    <input readonly class="in text-dark"
+                                           type="text"
+                                           asp-for="Gender" />
+                                    <span class="shadow-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-btn" style="margin-left:350px">
+                        <a style="color:white" asp-controller="ManageUser" asp-action="Reform">
+                            Update Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

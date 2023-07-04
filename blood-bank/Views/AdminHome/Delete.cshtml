@@ -1,0 +1,31 @@
+﻿@model AdminHomeData
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="mb-3 row">
+            <label asp-for="UserId" class="col-sm-2 col-form-label">UserID</label>
+            <div class="col-sm-10">
+                <input type="text" disabled readonly class="form-control-plaintext" asp-for="UserId">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="UserName" class="col-sm-2 col-form-label">UserID</label>
+            <div class="col-sm-10">
+                <input type="text" disabled readonly class="form-control-plaintext" asp-for="UserName">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Status" class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" disabled readonly class="form-control-plaintext" asp-for="Status">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="BloodGroup" class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" disabled readonly class="form-control-plaintext" asp-for="BloodGroup">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary" style="width:150px;"><i class="bi bi-x-circle-fill"></i>Delete</button>
+    </div>
+</form>

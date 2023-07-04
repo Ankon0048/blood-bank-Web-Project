@@ -1,0 +1,40 @@
+﻿@model List<ReportData>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Blood Group</th>
+                        <th>Number</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var obj in Model)
+                    {
+                        <tr>
+                            <td>@obj.UserName</td>
+                            <td>@obj.Bloodgroup</td>
+                            <td>@obj.Number</td>
+                            <td>@obj.Status</td>
+                            <td>@obj.Amount</td>
+                            <td>@obj.Action</td>
+                            <td>@obj.Date</td>
+                            <td>@obj.Location</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/userreport.js"></script>
+}

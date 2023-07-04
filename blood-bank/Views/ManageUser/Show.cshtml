@@ -1,0 +1,33 @@
+﻿@model UserNotification
+<a asp-controller="ManageUser" asp-action="Notifications" class="btn btn-outline-success mt-3" style="margin-left:120px">
+    <i class="bi bi-backspace"></i>
+</a>
+<div class="container mt-3">
+    <div class="row d-flex justify-content-end">
+        <div class="col">
+            <h1>
+                @Model.Status
+            </h1>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <h1>
+                @Model.Date
+            </h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-12 p-3" style="font-size:20px; background: #fff">
+            <p>@Model.Message</p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        @if (Model.Mark == "unread")
+        {
+            @using (Html.BeginForm("Mark", "ManageUser", new { id = Model.Count }, FormMethod.Post))
+            {
+                <button type="submit" class="btn btn-success">Mark as read</button>
+            }
+        }
+    </div>
+</div>

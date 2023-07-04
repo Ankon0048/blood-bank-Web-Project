@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    List<string> upliname = ViewBag.upliname;
+    List<string> uplidate = ViewBag.uplidate;
+    List<string> upliloc = ViewBag.upliloc;
+    List<string> uplitime = ViewBag.uplitime;
+}
+@model List<ReportData>
+<link href="~/css/homepage.css" rel="stylesheet" asp-append-version="true" />
+<section class="home" id="home">
+    <div class="image">
+        <img src="~/images/home-img-removebg-preview.png" />
+    </div>
+
+    <div class="content">
+        <h3>Stay safe,Stay healthy</h3>
+        <p>
+            Most blood banks record the information on blood collection/supply
+            manually in registers. Maintaining blood stock inventory is tedious
+            with laborious back-office paperwork and managing information on
+            availability and shortage of blood is a tall task.
+        </p>
+        <p>
+            A social initiative for a smart, transparent and holistic blood
+            management service from collection to supply. When it comes to blood,
+            right information at the right time can be the answer to a life and
+            death situation.So, Join us and help us in our cause.S
+        </p>
+        <a asp-controller="SignUp" asp-action="SignUp" class="btn">
+            Sign Up
+        </a>
+    </div>
+</section>
+<!-- home section ends -->
+@* dynamic part starts*@
+<section style="background-color:#cf3d3c">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 style="color:#e8e337; text-align:center; margin-bottom:5px;">
+                    Upcoming Events
+                </h1>
+                @for(int i=0; i<upliname.Count;i++)
+                {
+                    <h1 class="mb-2 text-center">Event Name: @upliname[i]</h1>
+                    <h2 class="mb-2 text-center">Event Location: @upliloc[i]</h2>
+                    <h3 class="mb-2 text-center">Event Date: @uplidate[i]</h3>
+                    <h4 class="mb-2 text-center">Time: @uplitime[i]</h4>
+                    <hr />
+                }
+            </div>
+            <div class="col-6" style="overflow:hidden">
+                <h1 style="color:#e8e337; text-align:center; margin-bottom:5px;">
+                    Live Blood Requests
+                </h1>
+                @foreach (var obj in Model)
+                {
+                    if(obj.Action == "Pending")
+                    {
+                        <h1 class="mb-2 text-center">Name: @obj.UserName</h1>
+                        <h2 class="mb-2 text-center">Blood Group: @obj.Bloodgroup</h2>
+                        <h3 class="mb-2 text-center">Contact Number: @obj.Number</h3>
+                        <h4 class="mb-2 text-center">Location: @obj.Location</h4>
+                        <hr />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- icons section starts -->
+<div style="text-align: center">
+    <h1 class="heading"><span>OUR</span> WORK</h1>
+</div>
+<section class="icons-container">
+    <div class="icons">
+        <i class="bi bi-hospital"></i>
+        <h3 id="number1">240+</h3>
+        <p>Hospitals Connected</p>
+    </div>
+    <div class="icons">
+        <i class="bi bi-droplet-fill"></i>
+        <h3 id="number2">340+</h3>
+        <p>Total Blood Collected(Litres)</p>
+    </div>
+    <div class="icons">
+        <i class="bi bi-clipboard-data-fill"></i>
+        <h3 id="number3">540+</h3>
+        <p>Total Data Digitized</p>
+    </div>
+    <div class="icons">
+        <i class="bi bi-calendar4-event"></i>
+        <h3 id="number4">220+</h3>
+        <p>Blood event organized</p>
+    </div>
+</section>
+<!-- icons section ends -->
+<!-- services section starts -->
+<section class="services" id="services">
+    <h1 class="heading">our <span>services</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hand-holding-medical"></i>
+            <h3>Blood Donation Campaigns</h3>
+            <p>
+                We arrange events where numerous individuals selflessly volunteers
+                to donate blood, demonstrating their compassion and commitment to
+                saving lives.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Fundraising</h3>
+            <p>
+                We are delighted to announce the successful culmination of our
+                recent fundraising, which aimed to support a worthy cause
+                close to our hearts.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-walkie-talkie"></i>
+            <h3>Awareness and Motivations</h3>
+            <p>
+                Blood donation motivation is driven by the desire to save lives and
+                make a positive impact on the community.We motivate people to donate
+                blood and save lives.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-tint"></i>
+            <h3>Blood Collection</h3>
+            <p>
+                The digitization of blood collection data has revolutionized the way
+                we manage and track blood donations.By transitioning from
+                paper-based systems to digital platforms, we have improved patient
+                care.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- services section ends  -->
+<!-- about section starts -->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+        <div class="image">
+            <img src="/images/About us page-pana.png" alt="" />
+        </div>
+        <div class="content">
+            <h3>Welcome to our blood management website</h3>
+            <p>
+                where we strive to optimize the efficiency and effectiveness of
+                blood donation and transfusion processes. With a team of dedicated
+                professionals and cutting-edge technology, we aim to ensure the
+                seamless flow of blood from donors to patients in need.
+            </p>
+            <p>
+                Our commitment lies in promoting safe and timely access to blood
+                products, empowering healthcare providers, and ultimately saving
+                lives through effective blood management strategies.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- about section ends -->
+<!-- booking section starts -->
+<section class="book" id="book">
+    <h1 class="heading">Donate <span>Now</span></h1>
+    <div class="row">
+        <div class="image">
+            <img src="~/images/blood donation-rafiki.png" />
+        </div>
+        <form action="">
+            <h3>Help in Our Cause</h3>
+            <a asp-controller="DonateBlood" asp-action="DonateBlood" class="btn text-dark">Donate</a>
+        </form>
+    </div>
+</section>
+<!-- booking section ends -->
+<!-- review section starts -->
+<section class="review" id="review">
+    <h1 class="heading">People's <span>review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="/images/profile-3.jpg" alt="" />
+            <h3>Anik Das</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <p class="text">
+                    team of volunteers who made the process smooth and comfortable.
+                    The organization and efficiency displayed throughout the campaign
+                    were truly commendable. The staff ensured that all necessary
+                    protocols and safety measures were strictly followed, creating a
+                    secure environment for donors.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="/images/profile-1.jpg" alt="" />
+            <h3>Ehsanul Karim</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <p class="text">
+                    I wholeheartedly commend the organizers, volunteers, and all those
+                    who contributed to this blood donation campaign. Their dedication
+                    and tireless efforts have made a tangible difference in the lives
+                    of countless individuals.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="/images/profile-2.jpg" alt="" />
+            <h3>Sonjoy roy</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <p class="text">
+                    Beyond the immediate impact of the campaign, the ripple effect of
+                    these blood donations is immeasurable. Every pint of blood
+                    collected has the potential to save multiple lives.The
+                    significance of this campaign cannot be overstated, as it not only
+                    saves lives but also reinforces the value of compassion and
+                    solidarity.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a asp-controller="BloodStories" asp-action="BloodStories" class="btn">Show More</a>
+    </div>
+</section>
+@section Scripts{
+    <script src="~/js/num.js"></script>
+}

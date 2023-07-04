@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --green: #cf3d3c;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 133, .2);
+    --border: .2rem solid var(--green);
+}
+
+* {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: 2rem 9%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+    .header .logo {
+        font-size: 2.5rem;
+        color: var(--black);
+    }
+
+        .header .logo i {
+            color: var(--green);
+        }
+
+    .header .navbar a {
+        font-size: 1.7rem;
+        color: var(--light-color);
+        margin-left: 2rem;
+    }
+
+        .header .navbar a:hover {
+            color: var(--green);
+        }
+
+    .header .navbar .double {
+        border: 2px solid black;
+        border-radius: 25px;
+        padding: 10px 10px;
+        border-color: #cf3d3c;
+    }
+
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/*find-donate-btn-css*/
+.fnd-donate {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn_1 {
+    display: inline-block;
+    padding: 18.5px 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    background-size: 200% auto;
+    border: 1px solid transparent;
+    background-image: linear-gradient(to left, #cf3d3c 0%, #fa8b0c 51%, #cf3d3c 100%);
+    text-decoration: none;
+}
+/*form-fill-up-css*/
+.form-out-div {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-radius: .25rem;
+    background-color: #fff;
+}
+
+.nece {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+.nece_2 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.out-contain {
+    width: 100%;
+    min-height: 100%;
+    padding: 15px;
+    background: #cf3d3c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-contain {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 130px 88px 148px;
+}
+
+.form-span {
+    display: block;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 44px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.wrap-input {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+input {
+    outline: none;
+    border: none;
+    overflow: visible;
+}
+
+.in {
+    height: 50px;
+    border-radius: 25px;
+    padding: 12px 30px;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.shadow-input {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(203, 74, 74, 0.5);
+    border-radius: 25px;
+}
+
+.form-control {
+    background: rgb(230, 230, 230);
+    color: rgb(139, 137, 137);
+    width: 90%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.sub-btn {
+    min-width: 193px;
+    height: 50px;
+    border-radius: 25px;
+    background: #cf3d3c;
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    border: none;
+}
+
+    .sub-btn:hover {
+        background-color: #343a40;
+    }
+
+.footer .box-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+    .footer .box-container .box h3 {
+        font-size: 2.5rem;
+        color: var(--black);
+        padding: 1rem 0;
+    }
+
+    .footer .box-container .box a {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--light-color);
+        padding: 1rem 0;
+    }
+
+        .footer .box-container .box a i {
+            padding-right: .5rem;
+            color: var(--green);
+        }
+
+        .footer .box-container .box a:hover i {
+            padding-right: 2rem;
+        }
+
+.footer .credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-color);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+    .footer .credit span {
+        color: var(--green);
+    }
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+    .heading span {
+        text-transform: uppercase;
+        color: var(--green);
+    }
+
+section:nth-child(even) {
+    background: #f5f5f5;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.third {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #dc3545;
+}
+
+.right-table {
+    margin-left: 200px;
+    color: white;
+    overflow: auto;
+}
+
+.left-table {
+    margin: 100px;
+    color: white;
+}
+
+.home-text {
+    line-height: 55px;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.by-part {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px;
+    font-family: roboto;
+    color: white;
+    margin-top: 30px;
+}
+/*edit of donate now section*/
+.three-options {
+    padding: 12px;
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+}
+
+    .three-options:hover {
+        color: black;
+        border-color: black;
+    }
+
+.bld-req {
+    font-size: 20px;
+    letter-spacing: 2px;
+}

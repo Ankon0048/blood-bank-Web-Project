@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --red: #dc3545;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+* {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 14px;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.bor {
+    border: solid 2px #dc3545;
+    border-radius: 25px;
+}
+
+.back {
+    background-image: url('../images/v2v.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 570px;
+}
+
+    .back p {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+
+.right {
+    margin-left: 200px;
+}
+
+.quote {
+    padding: 30px 50px 30px 30px;
+    background: #f9f9ff;
+    border-left: 2px solid #cf3d3c;
+}
+
+    .quote p {
+        font-size: 16px;
+        line-height: 30px;
+        color: #888;
+    }
+
+.left-table {
+    margin-left: 100px;
+    color: white;
+}
+
+.home-text {
+    line-height: 55px;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.by-part {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px;
+    font-family: roboto;
+    color: white;
+}
+
+.bore {
+    border: solid 2px #e9e4e5;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.third {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #dc3545;
+}
+
+.right-table {
+    margin-left: 200px;
+    color: white;
+    overflow: auto;
+}
+
+.left-table {
+    margin: 100px;
+    color: white;
+}
+
+.by-part {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px;
+    font-family: roboto;
+    color: white;
+    margin-top: 30px;
+}
+/*edit of donate now section*/
+.three-options {
+    padding: 12px;
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    text-decoration:none;
+    transition: all .3s ease;
+}
+
+.three-options:hover {
+        color: black;
+        border-color: black;
+    }
+
+.home-text {
+    line-height: 55px;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}

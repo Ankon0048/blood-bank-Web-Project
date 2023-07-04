@@ -1,0 +1,82 @@
+﻿@model List<BloodStory>
+
+<link href="~/css/bld-stories.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<section class="bg-img">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col text-center text-light">
+                <h1>Blood Stories</h1>
+                <p>The gift of blood cannot be replaced by technology or management. We are what we are now because of our brave donors. We'd love to share some of the stories that drive blood donors to donate, as well as stories about the blood search and testimony from patient families.</p>
+            </div>
+        </div>
+    </div>
+</section>
+@foreach (var obj in Model)
+{
+    <div class="container">
+        <div class="row left m-4">
+            <h2 class="text-center">@obj.UserName</h2>
+            <h4 class="text-center">@obj.Date</h4>
+            <hr>
+            <div class="col-10 bor">
+                <p>@obj.Story</p>
+            </div>
+            <div class="col">
+                <img class="im" src="@obj.Imageurl">
+            </div>
+        </div>
+    </div>
+}
+@*<div class="container">
+    <div class="row">
+        <div class="col m-4">
+            <h1 class="text-center">
+                Recent Stories
+            </h1>
+        </div>
+    </div>
+</div>
+*@
+@*<div class="conainter">
+    <div class="row ">
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 22rem;">
+                <img src="/images/story-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">I've only donated blood once in my life.By donating blood, I was able to make people happy and save their lives</p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 22rem;">
+                <img src="/images/story-2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 22rem;">
+                <img src="/images/story-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-end" style="margin-top:50px">
+    <div style="margin-top:200px">
+        <h1 class="text-dark mb-3">Share Your Story</h1>
+        <p class="text-danger mb-1">Has your life been transformed by blood donation? Or Did you or someone you love need a blood donation?</p>
+        <p>Your story may inspire someone to donate blood! Share your story with us!</p>
+        <div class="d-flex justify-content-center">
+            <a asp-controller="BloodStories" asp-action="AddStory" class="btn btn-outline-info">Share your Story</a>
+        </div>
+    </div>
+    <div>
+        <img src="~/images/sharestory.png" />
+    </div>
+</div>*@
